@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>React Hello World</title>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script
+    src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+  </script>
+    <script type="text/babel">
+
+        function App(props) {
+          
+          return (
+    <main>       
+       <header>
+         <h1>{props.name}'s Resume</h1>
+       </header>
+    
+      <section id="contact">
+        <h2>Contact Info</h2>
+        <address>
+        <ul>
+          <li>Name: {props.name}</li>
+          <li>Email: <a href="mailto:sally.student@gmail.com">sally.student@gmail.com</a></li>
+          <li>Phone: 905 555 2368</li>
+        </ul>
+        </address>
+        <img src="https://i.pinimg.com/originals/58/65/6e/58656ed0bc7399f3683ec3853c26867b.jpg" alt="Sally Student in leopard print" />
+
+      </section>
+      <section id="education">
+        <h2>Education</h2>
+        <ul>
+          <li>2017-2018: Web Development Track, <a href="http://Bloc.io" target="_blank">Bloc.io</a></li>
+          <li>2014-2017: Diploma in Computer Systems Technology, <a href="http://www.mohawkc.on.ca" target="_blank">Mohawk College</a>, Hamilton, ON, Canada</li>
+        </ul>
+      </section>
+      <section id="employment">
+        <h2>Employment Experience</h2>
+        <dl>
+          <dt>2019-present: Junior Web Developer, <a href="https://hifyreretail.com/">Hifyre Inc.</a>, Hamilton</dt>
+          <dd>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada aliquet mauris non posuere. Curabitur euismod placerat odio, non pulvinar libero ullamcorper at.</dd>
+          <dt>Jan-Apr 2018: Co-op Intern, Web Development, <a href="http://www.mohawkc.on.ca">Mohawk College</a>, Hamilton</dt>
+          <dd> Maecenas iaculis est et sollicitudin sodales. Phasellus eu ex id purus varius sodales vitae sed tortor. Vestibulum semper tortor erat, et sollicitudin mauris iaculis vel.</dd>
+        </dl>
+      </section>
+
+    </main>
+  
+          );
+        }
+
+        ReactDOM.render(
+          <App name="Sally Student"/>,
+          document.querySelector("#application-root")
+        );
+    </script>
+</body>
+</html>
